@@ -1,0 +1,14 @@
+{
+    "name": "vendor/monteroarquitectos",
+    "description": "Description of project monteroarquitectos.",
+    "authors": [
+        {
+            "name": "Macbook",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+        "slim/slim": "3.x-dev",
+        "slim/slim-skeleton": "dev-master"
+    }
+}
