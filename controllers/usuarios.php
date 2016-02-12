@@ -25,7 +25,7 @@ $app->post('/usuarios/', function ($request,$response, $args) {
 });
 
 $app->get('/usuarios/{name}', function ($request, $response, $args) {
-    $response->write("aquiii, " . $args['name']);
+    $response->write("aquiii, 2 " . $args['name']);
     return $response;
 });
 
