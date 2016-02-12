@@ -12,7 +12,15 @@ $app->get('/usuarios/', function ($request,$response, $args) {
     $usuario = new Usuario(); 
     $newResponseHeader = $response->withHeader('Content-type', 'application/json');
     $newResponseStatus = $newResponseHeader->withStatus(200);
-    $newResponseBody = $newResponseStatus->write($usuario->toJson());
+    $newResponseBody = $newResponseStatus->write($usuario->toJsonSeveral());
+    return $newResponseBody;
+});
+
+$app->post('/usuarios/', function ($request,$response, $args) {
+    $usuario = new Usuario(); 
+    $newResponseHeader = $response->withHeader('Content-type', 'application/json');
+    $newResponseStatus = $newResponseHeader->withStatus(200);
+    $newResponseBody = $newResponseStatus->write($usuario->toJsonSeveral());
     return $newResponseBody;
 });
 
