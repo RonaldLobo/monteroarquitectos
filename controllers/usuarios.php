@@ -12,7 +12,7 @@ $app->get('/usuarios/', function ($request,$response, $args) {
     $usuario = new Usuario(); 
     $newResponseHeader = $response->withHeader('Content-type', 'application/json');
     $newResponseStatus = $newResponseHeader->withStatus(200);
-    $newResponseBody = $newResponseStatus->write($usuario->toJsonSeveral());
+    $newResponseBody = $newResponseStatus->write($usuario->toJsonUsuarios());
     return $newResponseBody;
 });
 
@@ -20,7 +20,7 @@ $app->post('/usuarios/', function ($request,$response, $args) {
     $usuario = new Usuario(); 
     $newResponseHeader = $response->withHeader('Content-type', 'application/json');
     $newResponseStatus = $newResponseHeader->withStatus(200);
-    $newResponseBody = $newResponseStatus->write($usuario->toJsonSeveral());
+    $newResponseBody = $newResponseStatus->write($usuario->toJsonUsuarios());
     return $newResponseBody;
 });
 
@@ -28,5 +28,7 @@ $app->get('/usuarios/{name}', function ($request, $response, $args) {
     $response->write("aquiii, 2 " . $args['name']);
     return $response;
 });
+
+
 
 

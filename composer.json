@@ -8,6 +8,6 @@
         }
     ],
     "require": {
-        "slim/slim": "3.x-dev"
+        "slim/slim": "3.2.2"
     }
 }
